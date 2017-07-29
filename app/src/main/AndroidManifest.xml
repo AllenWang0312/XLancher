@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.android.launcher">
+
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+
+    <uses-permission
+        android:name="android.permission.STATUS_BAR"
+        tools:ignore="ProtectedPermissions"/>
+
+    <application
+        android:name=".module.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Launcher">
+        <activity
+            android:name=".module.main.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/NoBarAppTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name=".module.usb_bus.UsbBus"
+                 android:theme="@style/NoBarAppTheme">
+
+        </service>
+        <activity android:name=".module.apps.AppListActivity"
+                  android:theme="@style/NoBarAppTheme"
+            >
+
+        </activity>
+        <activity android:name=".module.serial.ConsoleActivity"
+                  android:theme="@style/NoBarAppTheme">
+
+        </activity>
+        <activity android:name=".module.spi.Spi_Activity" android:theme="@style/NoBarAppTheme">
+
+        </activity>
+    </application>
+
+</manifest>

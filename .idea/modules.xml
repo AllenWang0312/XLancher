@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/XLancher.iml" filepath="$PROJECT_DIR$/XLancher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/color_translater/color_translater.iml" filepath="$PROJECT_DIR$/color_translater/color_translater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fileopenhelper/fileopenhelper.iml" filepath="$PROJECT_DIR$/fileopenhelper/fileopenhelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui/ui.iml" filepath="$PROJECT_DIR$/ui/ui.iml" />
+    </modules>
+  </component>
+</project>

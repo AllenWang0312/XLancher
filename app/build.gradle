@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId 'com.android.launcher'
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
+        }
+    }
+//    signingConfigs {
+//        release {
+//            storeFile file("C:\\Users\\Gzw\\Documents\\Tencent Files\\1007991483\\FileRecv>keytool -list -keystore wpc_posonal.jks")
+//            storePassword 'qunsi003'
+//            keyAlias 'android_4.0.3_sys_key'
+//            keyPassword 'qunsi003'
+//        }
+//
+//        debug {
+//            storeFile file("C:\\Users\\Gzw\\Documents\\Tencent Files\\1007991483\\FileRecv>keytool -list -keystore wpc_posonal.jks")
+//            storePassword 'qunsi003'
+//            keyAlias 'android_4.0.3_sys_key'
+//            keyPassword 'qunsi003'
+//        }
+//    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt' signingConfig signingConfigs.release
+//        }
+//    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.android.support:cardview-v7:25.3.0'
+    //竖直 tablayout
+    compile 'q.rorbin:VerticalTabLayout:1.0.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    implementation project(':baselibrary')
+    implementation project(':fileopenhelper')
+}

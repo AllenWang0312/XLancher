@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BaseLibrary</string>
+    <string name="share">分享</string>
+    <string name="make_sure">确定</string>
+    <string name="call_off">取消</string>
+    <string name="save">保存</string>
+
+</resources>
