@@ -24,6 +24,7 @@ public class SpiJNITransfer{
     }
 
     public native void test();//
+
     public native int open(String path);//if return <0 can't open device
 //    private native int setSpiMode();//if(ret==-1) can't set spi mode
 //    private native int getSpiMode();//if(ret==-1) can't get spi mode
